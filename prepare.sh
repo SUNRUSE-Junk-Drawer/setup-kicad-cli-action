@@ -15,6 +15,7 @@ if [ "$(uname)" == "Darwin" ]; then
   echo TODO
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   sudo apt-get install tk-dev ninja-build libglew-dev libglm-dev libcurl4-openssl-dev libboost-dev libxi-dev -y
+  pip3 install wxPython
 else
   echo TODO
 fi
