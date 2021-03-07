@@ -4,9 +4,12 @@ GitHub Action to build and install the KiCAD CLI.
 
 ## License
 
-While this repository is [MIT licensed](./license.md), it includes a Git submodule of the [KiCAD repository](https://gitlab.com/kicad/code/kicad), which uses the GPLv3 license.
+While this repository is [MIT licensed](./license.md), it includess Git submodules of:
 
-You should make your own checks to ensure that your usage of this GitHub action is valid within its license agreement.
+- [KiCAD](https://gitlab.com/kicad/code/kicad), which uses the GPLv3 license.
+- [OCE](https://github.com/tpaviot/oce), which uses the lGPL license.
+
+You should make your own checks to ensure that your usage of this GitHub action is valid within these license agreements.
 
 ## Supported virtual environments
 
