@@ -3,11 +3,13 @@ set -e
 cd clone
 git checkout temp
 
-git submodule update --init --recursive --depth 1 submodules/kicad/code
+git submodule update --init --recursive --depth 1 submodules/kicad/code/kicad
 
-cd submodules/kicad/code
+cd submodules/kicad/code/kicad
 
 mkdir -p build/release
+
+cd build/release
 
 if [ "$(uname)" == "Darwin" ]; then
   echo TODO

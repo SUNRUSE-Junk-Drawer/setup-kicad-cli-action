@@ -22,7 +22,7 @@ jobs:
     - id: cache
       uses: actions/cache@v2
       with:
-        path: clone/submodules/kicad/code/build/release
+        path: clone/submodules/kicad/code/kicad/build/release
         key: neomura-setup-kicad-cli-action-${{ GITHUB.REPOSITORY }}-${{ GITHUB.REF }}-${{ matrix.os }}-${{ steps.prepare.outputs.sha }}
     - run: bash ./build.sh
       if: steps.cache.outputs.cache-hit != 'true'
@@ -54,7 +54,7 @@ jobs:
     - id: cache
       uses: actions/cache@v2
       with:
-        path: clone/submodules/kicad/code/build/release
+        path: clone/submodules/kicad/code/kicad/build/release
         key: neomura-setup-kicad-cli-action-${{ GITHUB.REPOSITORY }}-${{ GITHUB.REF }}-${{ matrix.os }}-${{ steps.prepare.outputs.sha }}
     - run: bash ./build.sh
       if: steps.cache.outputs.cache-hit != 'true'
