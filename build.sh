@@ -3,6 +3,16 @@ set -e
 cd clone
 git checkout temp
 
+git submodule update --init --recursive --depth 1 submodules/tpaviot/oce
+
+cd submodules/tpaviot/oce
+
+cmake -G Ninja .
+ninja
+sudo ninja install
+
+cd ../../..
+
 git submodule update --init --recursive --depth 1 submodules/kicad/code/kicad
 
 cd submodules/kicad/code/kicad
