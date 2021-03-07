@@ -8,8 +8,8 @@ git submodule update --init --recursive --depth 1 submodules/kicad/code/kicad
 cd submodules/kicad/code/kicad
 
 cd scripting/build_tools
-scripting/build_tools/get_libngspice_so.sh
-sudo scripting/build_tools/get_libngspice_so.sh install
+./get_libngspice_so.sh
+sudo ./get_libngspice_so.sh install
 cd ../..
 
 mkdir -p build/release
