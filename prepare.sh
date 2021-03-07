@@ -14,8 +14,7 @@ echo ::set-output name=sha::$(git rev-parse temp)
 if [ "$(uname)" == "Darwin" ]; then
   echo TODO
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-  echo TODO
-  #sudo apt-get install -y
+  sudo apt-get install libglx-dev -y
 else
   echo TODO
 fi
