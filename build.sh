@@ -7,8 +7,12 @@ git submodule update --init --recursive --depth 1 submodules/kicad/code/kicad
 
 cd submodules/kicad/code/kicad
 
-mkdir -p build/release
+cd scripting/build_tools
+scripting/build_tools/get_libngspice_so.sh
+sudo scripting/build_tools/get_libngspice_so.sh install
+cd ../..
 
+mkdir -p build/release
 cd build/release
 
 if [ "$(uname)" == "Darwin" ]; then
