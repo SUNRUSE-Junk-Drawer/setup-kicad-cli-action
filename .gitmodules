@@ -1,0 +1,3 @@
+[submodule "submodules/kicad/code"]
+	path = submodules/kicad/code
+	url = https://gitlab.com/kicad/code/kicad.git/
