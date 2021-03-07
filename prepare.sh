@@ -14,6 +14,12 @@ echo ::set-output name=sha::$(git rev-parse temp)
 if [ "$(uname)" == "Darwin" ]; then
   echo TODO
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  cd scripting/build_tools
+  chmod +x get_libngspice_so.sh
+  ./get_libngspice_so.sh
+  sudo ./get_libngspice_so.sh install
+  cd ../..
+
   sudo apt-get install ninja-build libglew-dev libglm-dev libcurl4-openssl-dev libboost-dev -y
 else
   echo TODO
