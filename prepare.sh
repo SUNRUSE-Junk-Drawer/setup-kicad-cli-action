@@ -14,7 +14,7 @@ echo ::set-output name=sha::$(git rev-parse temp)
 if [ "$(uname)" == "Darwin" ]; then
   echo TODO
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-  sudo apt-get install tk-dev ninja-build libglew-dev libglm-dev libcurl4-openssl-dev libboost-dev libxi-dev libgtk-3-dev libwxgtk3.0-gtk3-dev python-wxgtk3.0-dev -y
+  sudo apt-get install tk-dev ninja-build libglew-dev libglm-dev libcurl4-openssl-dev libboost-dev libxi-dev libgtk-3-dev libwxgtk3.0-gtk3-dev python-wxgtk3.0-dev python3-dev -y
 else
   echo TODO
 fi
